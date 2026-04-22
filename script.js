@@ -31,9 +31,11 @@ function updateCartCount() {
   if (count) {
     count.innerText = cart.length;
   }
-}
-
-window.onload = updateCartCount;
 window.onload = function() {
-  document.getElementById("loader").style.display = "none";
+  updateCartCount();
+
+  let loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
 };
