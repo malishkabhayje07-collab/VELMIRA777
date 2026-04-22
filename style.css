@@ -65,3 +65,17 @@ button {
   width:100%;
   padding:10px;
 }
+.nav {
+  margin-top: 15px;
+}
+
+.nav a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  background: #93c5fd;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
