@@ -1,0 +1,67 @@
+body {
+  margin:0;
+  font-family: 'Segoe UI';
+  background: linear-gradient(to right,#e0f2fe,#dbeafe);
+}
+
+.app {
+  max-width:400px;
+  margin:auto;
+  background:#f8fafc;
+  padding:15px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.brand {
+  font-size:30px;
+  font-weight:bold;
+}
+
+.tagline {
+  color:gray;
+}
+
+.offer {
+  background:#93c5fd;
+  padding:10px;
+  border-radius:10px;
+  margin:10px 0;
+}
+
+.gallery img {
+  width:30%;
+  border-radius:10px;
+}
+
+.products {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.card {
+  background:white;
+  padding:10px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.card img {
+  width:100%;
+  border-radius:10px;
+}
+
+button {
+  margin:5px;
+  padding:5px;
+  border:none;
+  border-radius:10px;
+  background:#60a5fa;
+  color:white;
+}
+
+.checkout {
+  width:100%;
+  padding:10px;
+}
