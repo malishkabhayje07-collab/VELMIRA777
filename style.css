@@ -157,3 +157,18 @@ button:hover {
     transform: translateX(-50%) translateY(0);
   }
 }
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+footer p {
+  transition: 0.3s;
+}
+
+footer p:hover {
+  color: #ff69b4;
+  letter-spacing: 1px;
+}
