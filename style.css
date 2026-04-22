@@ -133,3 +133,27 @@ button:hover {
   font-size: 20px;
   z-index: 999;
 }
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f9a8d4;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: fadePop 0.3s ease;
+}
+
+@keyframes fadePop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
