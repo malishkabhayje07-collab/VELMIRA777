@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Velmira</title>
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<title>Velmira</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
 
 <body>
-
 <div class="app">
-<div class="cart-icon">
-  🛒 <span id="cartCount">0</span>
+<div class="logo-container">
+    <img src="logo.png" alt="Velmira Logo" class="logo">
 </div>
-<h1 class="brand">Velmira ✨</h1>
-<p class="tagline">Where Dreams Meet Style 💫</p>
-
-<div class="offer">Summer Sale ☀️ 50% OFF</div>
-
-<h2>⭐ 5 Star Styles</h2>
-<div class="gallery">
-  <img src="top1.jpg">
-  <img src="dress1.jpg">
-  <img src="skirt1.jpg">
+  <div class="brand-container">
+    <h2 class="brand-name">☆VELMIRA☆</h2>
+ <p class="tagline">Where Dreams Meet Style.</p>
 </div>
-<nav class="nav">
-  <a href="tops.html">Tops 👚</a>
-  <a href="skirts.html">Skirts 💫</a>
-  <a href="dresses.html">Dresses 👗</a>
-  <a href="cart.html">Cart 🛒</a>
-  <a href="feedback.html">Feedback 💌</a>
-</nav>
-<h2>💖 Customer Love</h2>
-<p>"Absolutely magical outfits!" ✨</p>
-<p>"Feels like Pinterest in real"</p>
+
+    <div class="action-buttons">
+        ♡ WISHLIST <span id="wishlistCount">0</span>
+        🛒 CART <span id="cartCount">0</span>
+    </div>
+
+    <input class="search" placeholder="Search dreamy outfits...">
+
+</div>
+<div class="categories">
+<a href="tops.html">Tops </a>
+<a href="dresses.html">Dresses</a>
+<a href="skirts.html">Skirts</a>
+<a href="cart.html">Cart</a>
+<a href="feedback.html">Feedback</a>
+<a href="about.html">About</a>
+</div>
+
+<h3>Top Picks</h3>
+
+<div class="products">
+
+<div class="big-card">
+<img src="top1.jpg">
+<h3>Blush Cloud ☁️</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>₹799</p>
+<button onclick="addToCart('Blush Cloud',799)">Add 🛒</button>
+</div>
+
+<div class="big-card">
+<img src="dress1.jpg">
+<h3>Rosé Dream 🌹</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>₹1499</p>
+<button onclick="addToCart('Rosé Dream',1499)">Add 🛒</button>
+</div>
+
+<div class="big-card">
+<img src="skirt1.jpg">
+<h3>Moonlight Twirl 🌙</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>₹999</p>
+<button onclick="addToCart('Moonlight Twirl',999)">Add 🛒</button>
+</div>
+
+<div class="big-card">
+<img src="top2.jpg">
+<h3>Petal Kiss 🌸</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>₹899</p>
+<button onclick="addToCart('Petal Kiss',899)">Add 🛒</button>
+</div>
+
+<div class="big-card">
+<img src="dress2.jpg">
+<h3>Sunset Bloom 🌅</h3>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>₹1599</p>
+<button onclick="addToCart('Sunset Bloom',1599)">Add 🛒</button>
+</div>
+</div>
 <footer>
-  <p>© 2026 Velmira. Designed by Malishka</p>
+<p>© 2026 Velmira. Designed by Malishka</p>
 </footer>
 </div>
-
 </body>
 </html>
