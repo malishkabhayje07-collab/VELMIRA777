@@ -1,174 +1,338 @@
 body {
   margin: 0;
   font-family: 'Segoe UI';
-  background: linear-gradient(135deg, #fbcfe8, #bae6fd);
-  position: relative;
+  background: linear-gradient(-45deg,#ffd6e0,#e0f2fe,#f3e8ff,#ffe4ec);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
-body::after {
-  content: "✨ ✧ 💖 ✨ ✧";
-  position: fixed;
-  top: 20%;
-  left: 10%;
-  font-size: 20px;
-  opacity: 0.2;
+@keyframes gradientBG {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 .app {
-  max-width: 400px;
-  margin: auto;
-  padding: 15px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.brand {
-  font-size:30px;
-  font-weight:bold;
-}
-
-.tagline {
-  color:gray;
-}
-
-.offer {
-  background:#93c5fd;
-  padding:10px;
-  border-radius:10px;
-  margin:10px 0;
-}
-
-.gallery img {
-  width:30%;
-  border-radius:10px;
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 12px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.7);
 }
 
 .products {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
-
-.card {
-  background:white;
-  padding:10px;
-  border-radius:15px;
-  text-align:center;
-}
-
-.card img {
-  width:100%;
-  border-radius:10px;
-}
-
-button {
-  margin:5px;
-  padding:5px;
-  border:none;
-  border-radius:10px;
-  background:#60a5fa;
-  color:white;
-}
-
-.checkout {
-  width:100%;
-  padding:10px;
-}
-.nav {
-  margin-top: 15px;
-}
-
-.nav a {
-  display: inline-block;
-  margin: 5px;
-  padding: 8px 12px;
-  background: #93c5fd;
-  border-radius: 10px;
-  text-decoration: none;
-  color: black;
-  font-size: 12px;
-}
-.cart-icon {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: #60a5fa;
-  color: white;
-  padding: 5px 10px;
+.big-card {
+  background: #fff0f5;
   border-radius: 20px;
-  font-size: 14px;
-}.card {
-  transition: 0.3s;
+  padding: 10px;
+  text-align: center;
+  transition: 0.4s;
+  box-shadow: 0 5px 15px rgba(255,182,193,0.3);
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(96,165,250,0.5);
-}button {
+.big-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(255,105,180,0.6);
+}
+.big-card img {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid #ffc0cb;
+  box-shadow: 0 10px 25px rgba(255,182,193,0.5);
+  transition: 0.4s;
+}
+
+.big-card img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 35px rgba(255,105,180,0.8);
+}
+button {
+  border-radius: 20px;
+  background: linear-gradient(135deg,#ff85a2,#ffb6c1);
+  border: none;
+  padding: 8px;
+  color: white;
   transition: 0.3s;
 }
 
 button:hover {
-  background: #3b82f6;
   transform: scale(1.1);
-}.app {
-  animation: fadeIn 1s ease-in;
+  box-shadow: 0 5px 20px rgba(255,105,180,0.6);
 }
+.stars {
+  color: gold;
+}body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}.card img {
-  transition: 0.3s;
-}
+  background: radial-gradient(circle at top left, rgba(255,182,193,0.3), transparent),
+              radial-gradient(circle at bottom right, rgba(173,216,230,0.3), transparent);
 
-.card img:hover {
-  transform: scale(1.08);
-}
-.popup {
+  z-index: -1;
+}.popup {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: #f9a8d4;
-  color: black;
+  background: hotpink;
+  color: white;
   padding: 10px 20px;
   border-radius: 20px;
-  font-size: 14px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  animation: fadePop 0.3s ease;
+  box-shadow: 0 5px 20px rgba(255,105,180,0.6);
+}/* Topbar brand name */
+.topbar h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+    color: #ff4d88;
 }
 
-@keyframes fadePop {
-  from {
+/* Hero main title */
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #111;
+}footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    border-top: 1px solid #ff99bb;
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+}.big-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Hover glow effect */
+.big-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 77, 136, 0.5),
+                0 0 40px rgba(255, 182, 193, 0.4);
+}body {
     opacity: 0;
-    transform: translateX(-50%) translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-  color: #777;
+    animation: fadeIn 0.6s ease-in forwards;
 }
 
-footer p {
-  transition: 0.3s;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}.hero h1 {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #ff4d88, #ff99cc);
+    color: white;
+
+    font-weight: 900;
+    letter-spacing: 4px;
+
+    box-shadow: 0 0 20px rgba(255, 77, 136, 0.4),
+                0 0 40px rgba(255, 182, 193, 0.3);
+}.hero {
+    text-align: center;
 }
 
-footer p:hover {
-  color: #ff69b4;
-  letter-spacing: 1px;
+/* Aesthetic handwritten tagline */
+.tagline {
+    font-family: 'Parisienne', cursive;
+    font-size: 30px;
+    color: #ff4d88;
+    margin-top: 10px;
+    letter-spacing: 1px;
+
+    text-align: center;
+    opacity: 0.95;
+
+    animation: fadeUp 1.2s ease-in-out;
+}
+}@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}.tagline {
+    text-shadow: 0 0 10px rgba(255, 77, 136, 0.2);
+}.header {
+    text-align: center;
+    padding: 25px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Tagline */
+.tagline {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+/* Cart + Wishlist buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Search bar */
+.search {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    width: 250px;
+}..brand-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* GLASS + GLOW BACKGROUND BOX */
+.brand-name,
+.tagline {
+    background: linear-gradient(135deg, #ff4d88, #ff99cc);
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin: 8px auto;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 77, 136, 0.5),
+                0 0 40px rgba(255, 182, 193, 0.3);
+}
+
+/* BRAND NAME STYLE */
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+
+    /* WHITE TEXT + PINK GLOW */
+    color: white;
+    text-shadow: 0 0 8px #ff4d88,
+                 0 0 18px #ff99cc;
+}
+
+/* TAGLINE STYLE */
+.tagline {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
+    opacity: 0.95;
+}.brand {
+    text-align: center;
+}.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    /* soft glow like luxury brands */
+    box-shadow: 0 0 15px rgba(255, 77, 136, 0.4),
+                0 0 30px rgba(255, 182, 193, 0.3);
+
+    transition: 0.3s ease;
+}
+
+/* hover effect */
+.logo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 77, 136, 0.6),
+                0 0 50px rgba(255, 182, 193, 0.4);
+}.about-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #ff4d88;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 16px;
+    color: #444;
+    max-width: 600px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff4d88, #ff99cc);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255,77,136,0.4);
+}.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    /* background box */
+    background: linear-gradient(135deg, #ffe4ec, #fff0f5);
+    padding: 15px 20px;
+    margin: 25px auto;
+
+    border-radius: 20px;
+    width: fit-content;
+
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
+}.categories a {
+    text-decoration: none;
+    color: #333;
+
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    background: white;
+
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.categories a:hover {
+    background: #ff4d88;
+    color: white;
+
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255,77,136,0.4);
+}h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
